@@ -4,55 +4,39 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
-        rel="stylesheet" />
-
+    <title>Unicorn Magic Brew</title>
     <link rel="stylesheet" href="./styles/style.css" />
-
-    <title>Unicorn Magic Brew | Coming Soon</title>
 </head>
 
 <body>
-    <main class="coming-soon">
-        <div class="bg-blur bg-blur--left"></div>
-        <div class="bg-blur bg-blur--right"></div>
+    <main class="hero">
+        <div class="hero__inner">
+            <p class="hero__eyebrow">PREMIUM COFFEE EXPERIENCE</p>
 
-        <section class="hero">
-            <div class="hero__bg-text hero__bg-text--one">
-                <span>Unicorn Magic Brew</span>
-            </div>
+            <section class="hero__stage">
+                <h1 class="hero__title" aria-label="Unicorn Magic Brew">
+                    <span class="hero__title-line">UNICORN MAGIC BREW</span>
+                </h1>
+                <div class="hero__bg-word">COFFEE</div>
 
-            <div class="hero__bg-text hero__bg-text--two">
-                <span>Unicorn Magic Brew</span>
-            </div>
+                <div class="hero__visual">
+                    <div class="hero__glow"></div>
+                    <img src="./assets/coffeMain.png" alt="Iced coffee" class="hero__image" />
+                </div>
+            </section>
 
-            <div class="hero__content">
-                <p class="hero__eyebrow reveal reveal-1">PREMIUM COFFEE EXPERIENCE</p>
-
-                <h1 class="hero__title reveal reveal-2">Unicorn Magic Brew</h1>
-                <p class="hero__coffee reveal reveal-3">Coffee</p>
-
-                <p class="hero__text reveal reveal-4">
-                    Our coffee is triple certified and approved by Organic Soil Association, Rainforest Alliance and
-                    Fairtrade Foundation
+            <section class="hero__info">
+                <p class="hero__text">
+                    Our coffee is triple certified and approved by Organic Soil
+                    Association, Rainforest Alliance and Fairtrade Foundation.
                 </p>
 
-                <div class="hero__status reveal reveal-5">
-                    <span class="dot"></span>
-                    <span>Coming Soon</span>
+                <div class="hero__status">
+                    <span class="hero__status-dot"></span>
+                    <span>COMING SOON</span>
                 </div>
-            </div>
-
-            <div class="hero__image-wrap">
-                <div class="image-glow"></div>
-                <img src="./assets/coffeMain.png" alt="Iced coffee" class="hero__image" />
-            </div>
-        </section>
-
+            </section>
+        </div>
     </main>
 </body>
 
