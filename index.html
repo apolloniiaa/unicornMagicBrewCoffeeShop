@@ -17,6 +17,51 @@
 
     <link rel="stylesheet" href="./styles/style.css" />
 </head>
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <filter id="coffee-distort">
+        <feTurbulence id="coffeeNoise" type="fractalNoise" baseFrequency="0.012 0.05" numOctaves="2" seed="7" />
+        <feDisplacementMap id="coffeeDisplace" in="SourceGraphic" scale="14" xChannelSelector="R"
+            yChannelSelector="G" />
+    </filter>
+</svg>
+<script>
+    const title = document.querySelector('.liquid-title');
+    const noise = document.getElementById('coffeeNoise');
+    const displace = document.getElementById('coffeeDisplace');
+
+    if (title && noise && displace) {
+        // drip elemek generálása
+        const dripCount = window.innerWidth < 640 ? 5 : 8;
+
+        for (let i = 0; i < dripCount; i++) {
+            const drip = document.createElement('span');
+            drip.className = 'coffee-drip';
+            drip.style.setProperty('--x', `${10 + i * (80 / (dripCount - 1))}%`);
+            drip.style.setProperty('--h', `${18 + Math.random() * 34}px`);
+            drip.style.setProperty('--delay', `${Math.random() * 4}s`);
+            drip.style.setProperty('--dur', `${3.8 + Math.random() * 2.2}s`);
+            title.appendChild(drip);
+        }
+
+        // enyhe organikus liquid torzítás
+        let t = 0;
+
+        function animateCoffee() {
+            t += 0.012;
+
+            const x = 0.012 + Math.sin(t * 0.9) * 0.0025;
+            const y = 0.05 + Math.cos(t * 1.3) * 0.008;
+            const scale = 12 + Math.sin(t * 1.8) * 4;
+
+            noise.setAttribute('baseFrequency', `${x.toFixed(4)} ${y.toFixed(4)}`);
+            displace.setAttribute('scale', scale.toFixed(2));
+
+            requestAnimationFrame(animateCoffee);
+        }
+
+        animateCoffee();
+    }
+</script>
 
 <body>
     <main class="hero">
@@ -24,7 +69,7 @@
             <p class="hero__eyebrow">PREMIUM COFFEE EXPERIENCE</p>
 
             <section class="hero__stage">
-                <h1 class="hero__title" aria-label="Unicorn Magic Brew">
+                <h1 class="hero__title liquid-title" data-text="UNICORN MAGIC BREW" aria-label="Unicorn Magic Brew">
                     <span class="hero__title-line">UNICORN MAGIC BREW</span>
                 </h1>
                 <div class="hero__bg-word" aria-hidden="true">
@@ -37,11 +82,11 @@
                             <span>THE COFFEE TRAILER</span>
                         </div>
                         <div class="hero__bg-row">
-                            <span>THE COFFEE VAN</span>
-                            <span>THE COFFEE VAN</span>
-                            <span>THE COFFEE VAN</span>
-                            <span>THE COFFEE VAN</span>
-                            <span>THE COFFEE VAN</span>
+                            <span>THE COFFEE TRAILER</span>
+                            <span>THE COFFEE TRAILER</span>
+                            <span>THE COFFEE TRAILER</span>
+                            <span>THE COFFEE TRAILER</span>
+                            <span>THE COFFEE TRAILER</span>
                         </div>
                     </div>
                 </div>
