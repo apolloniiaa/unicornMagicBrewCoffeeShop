@@ -5,6 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unicorn Magic Brew</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/logo.png" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/style.css" />
 </head>
 
@@ -17,24 +27,43 @@
                 <h1 class="hero__title" aria-label="Unicorn Magic Brew">
                     <span class="hero__title-line">UNICORN MAGIC BREW</span>
                 </h1>
-                <div class="hero__bg-word">COFFEE</div>
-
+                <div class="hero__bg-word" aria-hidden="true">
+                    <div class="hero__bg-track">
+                        <div class="hero__bg-row">
+                            <span>THE COFFEE TRAILER</span>
+                            <span>THE COFFEE TRAILER</span>
+                            <span>THE COFFEE TRAILER</span>
+                            <span>THE COFFEE TRAILER</span>
+                            <span>THE COFFEE TRAILER</span>
+                        </div>
+                        <div class="hero__bg-row">
+                            <span>THE COFFEE VAN</span>
+                            <span>THE COFFEE VAN</span>
+                            <span>THE COFFEE VAN</span>
+                            <span>THE COFFEE VAN</span>
+                            <span>THE COFFEE VAN</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="hero__visual">
                     <div class="hero__glow"></div>
+                    <div class="hero__shadow" aria-hidden="true"></div>
                     <img src="./assets/coffeMain.png" alt="Iced coffee" class="hero__image" />
                 </div>
             </section>
 
             <section class="hero__info">
                 <p class="hero__text">
+                    We're building something amazing for you. Stay tuned!
+                </p>
+                <div class="hero__status">
+                    <span class="hero__status-text">COMING SOON</span>
+                </div>
+                <!-- <p class="hero__text">
                     Our coffee is triple certified and approved by Organic Soil
                     Association, Rainforest Alliance and Fairtrade Foundation.
-                </p>
+                </p> -->
 
-                <div class="hero__status">
-                    <span class="hero__status-dot"></span>
-                    <span>COMING SOON</span>
-                </div>
             </section>
         </div>
     </main>
