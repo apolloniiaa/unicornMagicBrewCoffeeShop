@@ -267,7 +267,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
   padding: 0.9rem 2.2rem;
   overflow: hidden;
   border: 1px solid rgba(255, 216, 166, 0.24);
@@ -303,7 +303,7 @@ img {
   margin: 0;
   color: transparent;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 3rem;
+  font-size: 1.5rem;
   line-height: 1.05;
   letter-spacing: clamp(0.06em, 0.7vw, 0.16em);
   text-align: center;
@@ -597,7 +597,8 @@ img {
 }
 @media (max-width: 1024px) {
   .hero {
-    padding: 1rem 0;
+    padding: 3rem 0;
+    display: block;
   }
   .hero__page-bg {
     background-position: center 52%;
@@ -617,7 +618,7 @@ img {
   }
   .hero__text {
     width: 81%;
-    font-size: 30px;
+    font-size: 2rem;
   }
   .hero__text::before, .hero__text::after {
     width: 34px;
@@ -634,16 +635,15 @@ img {
   }
   .hero__eyebrow {
     margin: 0;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     font-size: 1.2rem;
   }
   .hero__status-text {
     padding: 0;
-    font-size: 3rem;
   }
   .hero__image {
     width: 500px;
-    max-width: 48vw;
+    max-width: 45vw;
   }
   .hero__steam {
     bottom: 40%;
@@ -661,7 +661,8 @@ img {
     padding-bottom: 18px;
   }
   .hero {
-    padding: 0;
+    padding: 3rem 0;
+    display: block;
   }
   .hero__page-bg {
     background-position: center center;
@@ -675,7 +676,7 @@ img {
   }
   .hero__text {
     width: 81%;
-    font-size: 19px;
+    font-size: 1rem;
   }
   .hero__text::before, .hero__text::after {
     display: none;
@@ -714,7 +715,7 @@ img {
   }
   .hero__status-text {
     padding: 0;
-    font-size: 23px;
+    font-size: 1rem;
   }
   .hero__image {
     width: 28rem;
